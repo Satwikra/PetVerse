@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Dashboard - PetVerse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+    }
+    .promo-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+  footer {
+      background-color: #2a254b;
+      color: white;
+      padding: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col {
+      flex: 1;
+      margin: 16px;
+      min-width: 200px;
+    }
+    .pet{
+      font-size: 40px;
+      
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text logo-text">
+      Pet Verse
+    </h1>
+    <nav class="flex gap-6 items-center font-medium">
+      <a href="indexx.html" class="hover:text-purple-600">Home</a>
+      <a href="dashboard.html" class="hover:text-purple-600">Dashboard</a>
+      <a href="grooming.html" class="hover:text-purple-600">Grooming</a>
+      <a href="vet.html"  class="hover:text-purple-600">Vets</a>
+
+      <a href="#" class="hover:text-purple-600">Community</a>
+      <button class="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+        Add Pet
+      </button>
+    </nav>
+  </header>
+
+
+  <!-- Dashboard Heading -->
+  <section class="text-center my-10">
+    <h1 class="text-4xl font-bold mb-2">Your Pet Dashboard</h1>
+    <p class="text-gray-500">Track health, activities, and milestones all in one place</p>
+  </section>
+
+  <!-- Dashboard Stats -->
+  <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-10">
+    <div class="bg-white border rounded-xl shadow p-6 flex items-center justify-between hover:shadow-lg transition">
+      <div>
+        <p class="text-gray-500">Total Pets</p>
+        <p class="text-3xl font-bold text-pink-500">4</p>
+      </div>
+      <div class="text-4xl text-pink-300">🐾</div>
+    </div>
+    <div class="bg-white border rounded-xl shadow p-6 flex items-center justify-between hover:shadow-lg transition">
+      <div>
+        <p class="text-gray-500">Health Score</p>
+        <p class="text-3xl font-bold text-green-600">95%</p>
+      </div>
+      <div class="text-4xl text-green-300">💚</div>
+    </div>
+    <div class="bg-white border rounded-xl shadow p-6 flex items-center justify-between hover:shadow-lg transition">
+      <div>
+        <p class="text-gray-500">Next Checkup</p>
+        <p class="text-xl font-bold">In 2 weeks</p>
+      </div>
+      <div class="text-4xl text-pink-300">📅</div>
+    </div>
+  </section>
+
+  <!-- Pet Cards -->
+  <section class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 pb-16">
+    <!-- Card 1 -->
+    
+
+
+      
+      <!-- Card 1: Bella -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Bella photo" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Bella</h3>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700">Healthy</span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Age</span>
+              <span class="font-semibold">3 years</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Weight</span>
+              <span class="font-semibold">65 lbs</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Last Checkup</span>
+              <span class="font-semibold">2 weeks ago</span>
+            </div>
+          </div>
+          <button class="w-full mt-4 h-10 px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Snowball -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Snowball photo" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Snowball</h3>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-rose-100 text-rose-700">Check Soon</span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Age</span>
+              <span class="font-semibold">5 years</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Weight</span>
+              <span class="font-semibold">12 lbs</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Last Checkup</span>
+              <span class="font-semibold">6 months ago</span>
+            </div>
+          </div>
+          <button class="w-full mt-4 h-10 px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Rex -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+        <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Rex photo" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Rex</h3>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700">Excellent</span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Age</span>
+              <span class="font-semibold">7 years</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Weight</span>
+              <span class="font-semibold">80 lbs</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Last Checkup</span>
+              <span class="font-semibold">1 month ago</span>
+            </div>
+          </div>
+          <button class="w-full mt-4 h-10 px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Milo -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all">
+        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Milo photo" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Milo</h3>
+            <span class="px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-700">Healthy</span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Age</span>
+              <span class="font-semibold">2 years</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Weight</span>
+              <span class="font-semibold">14 lbs</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Last Checkup</span>
+              <span class="font-semibold">3 weeks ago</span>
+            </div>
+          </div>
+          <button class="w-full mt-4 h-10 px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transition-all">
+            View Details
+          </button>
+        </div>
+      </div>
+
+    
+
+
+
+
+
+
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        
+        <h4 ><div class="pet">Pet Verse</div></h4>
+        <p>Your trusted companion for pet care, health tracking, and connecting with the pet community.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li>Pet Dashboard</li>
+          <li>Health Tracking</li>
+          <li>Vet Appointment</li>
+          <li>Pet Store</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact Us</li>
+          <li>Emergency Care</li>
+          <li>FAQ</li>
+          <li>Pet Care Tips</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>support@pawpal.com</li>
+          <li>1-800-PET-CARE</li>
+          <li>123 Pet Street, Animal City, AC 12345</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

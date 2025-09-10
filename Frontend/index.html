@@ -1,0 +1,380 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Verse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+    }
+    .promo-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+    #rad{
+      border-radius: 30px;
+    }
+    #radi{
+      border-radius: 40px;
+      height: 70vh;
+      width: auto;
+    }
+    .health {
+      color: #9B59B6; /* Purple */
+    }
+    .happiness {
+      color: #E91E63; /* Pink */
+    }
+    footer {
+      background-color: #2a254b;
+      color: white;
+      padding: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col {
+      flex: 1;
+      margin: 16px;
+      min-width: 200px;
+    }
+    .pet{
+      font-size: 40px;
+      
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+
+    <section class="relative overflow-hidden">
+        <!-- Floating Decorative Icons -->
+<div class="absolute inset-0 pointer-events-none z-0">
+  <!-- Heart Top Left -->
+  <div class="absolute top-20 left-10 text-emerald-500 text-4xl opacity-30">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  </div>
+
+  <!-- Bone Top Right -->
+  <div class="absolute top-40 right-20 text-rose-400 text-3xl opacity-40">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
+    </svg>
+  </div>
+
+  <!-- Heart Bottom Left -->
+  <div class="absolute bottom-20 left-20 text-purple-500 text-2xl opacity-35">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  </div>
+
+  <!-- Heart Center Left -->
+  <div class="absolute top-60 left-1/3 text-pink-500 text-3xl opacity-30">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  </div>
+
+  <!-- Paw Print Top Right -->
+  <div class="absolute top-32 right-1/4 text-indigo-400 text-2xl opacity-25">
+    🐾
+  </div>
+  
+  <!-- Paw Print Bottom Right -->
+  <div class="absolute bottom-40 right-10 text-emerald-400 text-3xl opacity-30">
+    🐾
+  </div>
+
+  <!-- Paw Print Mid Left -->
+  <div class="absolute top-80 left-1/4 text-purple-400 text-2xl opacity-25">
+    🐾
+  </div>
+
+  <!-- Paw Print Bottom Center -->
+  <div class="absolute bottom-60 left-1/2 text-pink-400 text-3xl opacity-30">
+    🐾
+  </div>
+</div>
+
+    <!-- <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text logo-text">
+      Pet Verse
+    </h1>
+    <nav class="flex gap-6 items-center font-medium">
+      <a href="indexx.html" class="hover:text-purple-600">Home</a>
+      <a href="dashboard.html" class="hover:text-purple-600">Dashboard</a>
+      <a href="grooming.html" class="hover:text-purple-600">Grooming</a>
+      <a href="vet.html"  class="hover:text-purple-600">Vets</a>
+
+      <a href="#" class="hover:text-purple-600">Community</a>
+      <button class="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+        Add Pet
+      </button>
+    </nav>
+  </header> -->
+
+  <header class="bg-white shadow-md px-6 py-4">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text logo-text">
+      Pet Verse
+    </h1>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menu-btn" class="md:hidden text-purple-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-6 items-center font-medium">
+      <a href="indexx.html" class="hover:text-purple-600">Home</a>
+      <a href="dashboard.html" class="hover:text-purple-600">Dashboard</a>
+      <a href="grooming.html" class="hover:text-purple-600">Grooming</a>
+      <a href="vet.html" class="hover:text-purple-600">Vets</a>
+      <a href="#" class="hover:text-purple-600">Community</a>
+      <button class="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+        Add Pet
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Nav -->
+  <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 font-medium">
+    <a href="indexx.html" class="block hover:text-purple-600">Home</a>
+    <a href="dashboard.html" class="block hover:text-purple-600">Dashboard</a>
+    <a href="grooming.html" class="block hover:text-purple-600">Grooming</a>
+    <a href="vet.html" class="block hover:text-purple-600">Vets</a>
+    <a href="#" class="block hover:text-purple-600">Community</a>
+    <button class="w-full text-left px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+      Add Pet
+    </button>
+  </div>
+</header>
+
+
+  
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-16 gap-10">
+    
+    <!-- Left: Text Content -->
+    <div class="max-w-xl text-center md:text-left">
+      <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+        Your Pet's
+        <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Health &amp; Happiness
+        </span>
+        in One App
+      </h1>
+
+ 
+      <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+  Track health, schedule vet visits, connect with other pet parents, and shop premium pet products all in one beautiful, easy-to-use app.
+</p>
+      <div class="flex flex-wrap justify-center md:justify-start gap-4">
+        <!-- Download Now -->
+        <button class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:opacity-90 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+          </svg>
+          Download Now
+        </button>
+
+        <!-- Watch Demo -->
+        <button class="flex items-center gap-2 px-6 py-3 border-2 border-purple-500 text-purple-600 bg-white rounded-lg shadow-md hover:bg-purple-50 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M6.5 5.5v9l7-4.5-7-4.5z" />
+          </svg>
+          Watch Demo
+        </button>
+      </div>
+    </div>
+
+    <div class="w-full max-w-7xl mx-auto px-4 relative">
+  <!-- <div class="relative overflow-hidden h-64"> -->
+    <div class="relative overflow-hidden h-48 sm:h-64 md:h-80 lg:h-96 rounded-lg shadow-lg">
+   <!-- add some width to carousel slides -->
+
+    <div class="carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-20">
+      <img src="pett.jpg" class="w-full h-full object-cover" />
+      <div class="absolute bottom-2 w-full text-center text-white text-sm bg-black bg-opacity-50 py-2">“Where every pawprint leads to care, 
+        connection, and cuddles. Welcome to Petverse!”</div>
+    </div>
+    <div class="carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-10">
+      <img src="gromm.jpg" class="w-full h-full object-cover" />
+      <div class="absolute bottom-2 w-full text-center text-white text-sm bg-black bg-opacity-50 py-2">“Fresh trims, happy tails. 
+        Grooming made effortless and fab.”</div>
+    </div>
+    <div class="carousel-slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0">
+      <img src="vetdoc.jpg" class="w-full h-full object-cover" />
+      <div class="absolute bottom-2 w-full text-center text-white text-sm bg-black bg-opacity-50 py-2">“Compassionate care for your furry family. 
+        Trust our vets to keep them happy and healthy.”</div>
+    </div>
+  </div>
+
+  <div class="flex justify-center space-x-2 mt-4">
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full"></span>
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full"></span>
+    <span class="dot w-4 h-4 bg-gray-400 rounded-full"></span>
+  </div>
+</div>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.style.opacity = '0';
+    dots[i].classList.remove('bg-gray-600');
+    dots[i].classList.add('bg-gray-400');
+  });
+  slides[slideIndex].style.opacity = '1';
+  dots[slideIndex].classList.remove('bg-gray-400');
+  dots[slideIndex].classList.add('bg-gray-600');
+
+  slideIndex = (slideIndex + 1) % slides.length;
+  setTimeout(showSlides, 2000);
+}
+showSlides();
+</script>
+  </section>
+</section>
+
+    <section class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+      Ready to Start Your Pet Care Journey?
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-xl text-gray-600 mb-8">
+      Join thousands of pet parents who trust PawPal for their furry friends' health and happiness.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      
+      <!-- View Dashboard Button -->
+      <a href="dashboard.html">
+        <button class="inline-flex items-center justify-center gap-2 text-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+          View Dashboard
+        </button>
+      </a>
+
+      <!-- Add Your Pet Button -->
+      <a href="addpet.html">
+        <button class="inline-flex items-center justify-center gap-2 text-sm border-2 border-purple-500 text-purple-500 px-8 py-4 rounded-xl font-semibold hover:bg-purple-500 hover:text-white transition-all">
+          Add Your Pet
+        </button>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        
+        <h4 ><div class="pet">Pet Verse</div></h4>
+        <p>Your trusted companion for pet care, health tracking, and connecting with the pet community.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li>Pet Dashboard</li>
+          <li>Health Tracking</li>
+          <li>Vet Appointment</li>
+          <li>Pet Store</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact Us</li>
+          <li>Emergency Care</li>
+          <li>FAQ</li>
+          <li>Pet Care Tips</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>support@pawpal.com</li>
+          <li>1-800-PET-CARE</li>
+          <li>123 Pet Street, Animal City, AC 12345</li>
+        </ul>
+            <div class="flex space-x-4 mt-4">
+        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.006 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 17.006 22 12z"/>
+      </svg>
+    </a>
+      <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8.29 20c7.547 0 11.675-6.155 11.675-11.49 0-.175 0-.349-.012-.522A8.18 8.18 0 0022 5.92a8.19 8.19 0 01-2.357.636 4.077 4.077 0 001.804-2.23 8.19 8.19 0 01-2.605.981A4.1 4.1 0 0015.448 4c-2.266 0-4.104 1.82-4.104 4.063 0 .318.036.627.106.924C7.728 8.87 5.1 7.4 3.24 5.1a4.02 4.02 0 00-.555 2.043c0 1.41.725 2.655 1.826 3.384a4.1 4.1 0 01-1.86-.51v.05c0 1.97 1.41 3.615 3.285 3.99a4.1 4.1 0 01-1.853.07c.522 1.61 2.037 2.78 3.833 2.81A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+      </svg>
+    </a>
+      <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a.75.75 0 110 1.5.75.75 0 010-1.5z"/>
+      </svg>
+    </a>
+    </div>
+      </div>
+    </div>
+  </footer>
+ <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+</body>
+</html>

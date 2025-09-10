@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Verse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f2f5; 
+      margin: 0;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+    }
+    .promo-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+    footer {
+      background-color: #2a254b;
+      color: white;
+      padding: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col {
+      flex: 1;
+      margin: 16px;
+      min-width: 200px;
+    }
+    .pet {
+      font-size: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .groomer-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+      gap: 20px; 
+      padding: 20px;
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+
+    .groomer-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px; 
+      overflow: hidden;
+      display: flex; 
+      flex-direction: column;
+    }
+
+    .groomer-card.promoted .promo-tag {
+      background-color: #ff5722; 
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      border-top-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .groomer-card-image {
+      position: relative;
+      width: 100%;
+      height: 150px; 
+      overflow: hidden;
+      background-color: #e0e0e0; 
+    }
+
+    .groomer-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .discount-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+
+    .discount-overlay span {
+      font-weight: bold;
+    }
+
+    .groomer-card-content {
+      padding: 15px;
+      flex-grow: 1; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    .groomer-card-content h3 {
+      margin: 0 0 8px 0;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .groomer-card-content p {
+      margin: 0 0 5px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .groomer-card-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .groomer-card-rating .stars {
+      color: #ffc107; 
+      font-size: 16px;
+      margin-right: 5px;
+    }
+
+    .groomer-card-rating .rating-value {
+      font-weight: bold;
+      color: #4CAF50; 
+    }
+
+    .groomer-card-address {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .groomer-card-actions {
+      margin-top: auto; 
+      display: flex;
+      justify-content: flex-end; 
+    }
+
+    .book-now-btn {
+      background-image: linear-gradient(to right, #9c27b0, #ff5722); 
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .book-now-btn:hover {
+      opacity: 0.9; 
+    }
+
+    
+    .main-content {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      text-align: center; 
+    }
+
+    .main-title {
+      font-size: 2.5rem; 
+      font-weight: bold;
+      color: #4a4a4a;
+      margin-bottom: 30px;
+    }
+
+    .filter-section {
+      text-align: left;
+      margin-bottom: 20px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px; 
+    }
+
+    .filter-section label {
+      font-size: 16px;
+      color: #555;
+    }
+    .groomer-card {
+ 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.groomer-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+  </style>
+</head>
+<body>
+
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text logo-text">
+      Pet Verse
+    </h1>
+    <nav class="flex gap-6 items-center font-medium">
+      <a href="indexx.html" class="hover:text-purple-600">Home</a>
+      <a href="dashboard.html" class="hover:text-purple-600">Dashboard</a>
+      <a href="#grooming.html" class="hover:text-purple-600">Grooming</a>
+      <a href="vet.html" class="hover:text-purple-600">Vets</a>
+      <a href="#" class="hover:text-purple-600">Community</a>
+      <button class="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+        Add Pet
+      </button>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <h2 class="main-title">Choose your best Groomer</h2>
+
+    <div class="filter-section">
+      <label for="filter-checkbox">Filter <input type="checkbox" id="filter-checkbox"></label>
+    </div>
+
+    <div class="groomer-card-container">
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo1.jpg" alt="Pet Super Market">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo2.jpg" alt="Pets Hub">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo3.jpg" alt="GV Pets Groom">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo4.jpg" alt="Paws & Claws">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo5.jpg" alt="PetCorner">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="groomer-card promoted">
+        <div class="groomer-card-image">
+          <div class="promo-tag">Promoted</div>
+          <img src="photo6.jpg" alt="Prince Pet Shop">
+          <div class="discount-overlay">
+            <span>Flat 15% OFF</span>
+            <span>X</span>
+          </div>
+        </div>
+        <div class="groomer-card-content">
+          <h3>Pawfect Groomers</h3>
+          <p>Haircut,Bath,NailTrim,...</p>
+          <div class="groomer-card-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            <span class="rating-value">4.0</span>
+          </div>
+          <div class="groomer-card-address">
+            Anna Nagar, Chennai
+          </div>
+          <div class="groomer-card-actions">
+            <button class="book-now-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4><div class="pet">Pet Verse</div></h4>
+        <p>Your trusted companion for pet care, health tracking, and connecting with the pet community.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li>Pet Dashboard</li>
+          <li>Health Tracking</li>
+          <li>Vet Appointment</li>
+          <li>Pet Store</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact Us</li>
+          <li>Emergency Care</li>
+          <li>FAQ</li>
+          <li>Pet Care Tips</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>support@pawpal.com</li>
+          <li>1-800-PET-CARE</li>
+          <li>123 Pet Street, Animal City, AC 12345</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

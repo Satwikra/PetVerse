@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vet Appointments – Pet Verse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    body {
+      margin: 0;
+      
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+   
+    
+
+    .logo {
+      font-size: 40px;
+      font-weight: 600;
+      background: linear-gradient(to right, #a362f3, #e44eaf);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      /* Required for some browsers */
+      background-clip: text;
+      color: transparent;
+    }
+   
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+    }
+    .promo-text {
+      font-family: 'Arial', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .add-pet-btn {
+      background: linear-gradient(to bottom, #a64cd1, #f95e84);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 13px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+       .heading-section {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .heading-section h1 {
+      font-size: 45px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 640;
+      margin: 5px;
+    }
+
+    .heading-section p {
+      color:#4e4b4b;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 35px;
+      
+      margin-top: 0px;
+      ;
+    }
+
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .vet-card {
+      width: 280px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.05);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .vet-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ddd;
+      margin-bottom: 12px;
+      justify-self: center;
+    }
+
+    .vet-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      
+    }
+
+    .vet-card span {
+      font-size: 14px;
+      color: #8e8e8e;
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 8px;
+      color:#9b44f1
+    }
+
+    .vet-card .stars {
+      color: #FFC107;
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .vet-card .review {
+      font-size: 14px;
+      color: #8e8e8e;
+      margin-bottom: 16px;
+    }
+
+    .vet-card .info {
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin-bottom: 10px;
+      color: #696767;
+    }
+
+    .book-btn {
+      background: linear-gradient(to right, #8837ec, #f438b2);
+      color: white;
+      border: none;
+      padding: 10px 50px;
+      border-radius: 20px;
+      margin-top: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #2a254b;
+      color: white;
+      padding: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col {
+      flex: 1;
+      margin: 16px;
+      min-width: 200px;
+    }
+    .pet{
+      font-size: 40px;
+      
+    }
+
+    .footer-col h4 {
+      font-size: 16px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+   <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+    <h1 class="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text logo-text">
+      Pet Verse
+    </h1>
+    <nav class="flex gap-6 items-center font-medium">
+      <a href="indexx.html" class="hover:text-purple-600">Home</a>
+      <a href="dashboard.html" class="hover:text-purple-600">Dashboard</a>
+      <a href="grooming.html" class="hover:text-purple-600">Grooming</a>
+      <a href="vet.html"  class="hover:text-purple-600">Vets</a>
+
+      <a href="#" class="hover:text-purple-600">Community</a>
+      <button class="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition" onclick="location.href='addpet.html'">
+        Add Pet
+      </button>
+    </nav>
+  </header>
+
+  <section class="heading-section">
+    <h1>Find Expert Veterinarians</h1>
+    <p>Book appointments with trusted vets in your area</p>
+
+  </section>
+
+  <section class="card-container">
+    <div class="vet-card">
+      <img src="https://www.shutterstock.com/shutterstock/photos/1696089559/display_1500/stock-vector-vector-circle-icon-woman-doctor-with-stethoscope-brown-hair-isolated-on-white-background-1696089559.jpg" alt="profile placeholder">
+      <h3>Dr. Ponna Sravani</h3>
+      <span>Veterinary Surgeon</span>
+      <div class="stars">★★★★★</div>
+      <div class="review">4.9 (127 reviews)</div>
+      <div class="info">📍 Downtown Animal Clinic</div>
+      <div class="info">🕒 Mon–Fri 9AM–6PM</div>
+      <div class="info">💵 $75 consultation</div>
+      <button class="book-btn">Book Appointment</button>
+    </div>
+
+    <div class="vet-card">
+      <img src="https://i.pinimg.com/736x/ba/42/69/ba4269581c18c4e7acfa0e85b2884d6f.jpg" alt="profile placeholder">
+      <h3>Dr. Sanjai M</h3>
+      <span>Animal Behaviorist</span>
+      <div class="stars">★★★★★</div>
+      <div class="review">4.9 (127 reviews)</div>
+      <div class="info">📍 Uptown Vet Clinic</div>
+      <div class="info">🕒 Mon–Fri 10AM–5PM</div>
+      <div class="info">💵 $80 consultation</div>
+      <button class="book-btn">Book Appointment</button>
+    </div>
+
+    <div class="vet-card">
+      <img src="https://www.shutterstock.com/shutterstock/photos/1739246228/display_1500/stock-vector-doctor-woman-medicine-medical-brown-nurse-stethoscope-vector-illustration-1739246228.jpg" alt="profile placeholder">
+      <h3>Dr. Praveena V</h3>
+      <span>Veterinary Dentist</span>
+      <div class="stars">★★★★★</div>
+      <div class="review">4.9 (127 reviews)</div>
+      <div class="info">📍 City Pet Hospital</div>
+      <div class="info">🕒 Mon–Sat 9AM–7PM</div>
+      <div class="info">💵 $90 consultation</div>
+      <button class="book-btn">Book Appointment</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        
+        <h4 ><div class="pet">Pet Verse</div></h4>
+        <p>Your trusted companion for pet care, health tracking, and connecting with the pet community.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li>Pet Dashboard</li>
+          <li>Health Tracking</li>
+          <li>Vet Appointment</li>
+          <li>Pet Store</li>
+          <li>Community</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Contact Us</li>
+          <li>Emergency Care</li>
+          <li>FAQ</li>
+          <li>Pet Care Tips</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>support@pawpal.com</li>
+          <li>1-800-PET-CARE</li>
+          <li>123 Pet Street, Animal City, AC 12345</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
